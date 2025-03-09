@@ -19,6 +19,7 @@ export const createTask = async (state: FormState, formData: FormData) => {
   try {
     await connectDb();
     await TaskModel.create(newTask);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     state.error = "タスクの作成に失敗しました";
     return state;
@@ -42,6 +43,7 @@ export const updateTask = async (
   try {
     await connectDb();
     await TaskModel.updateOne({ _id: id }, updateTask);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     state.error = "タスクの更新に失敗しました";
     return state;
@@ -54,6 +56,7 @@ export const deleteTask = async (id: string, state: FormState) => {
   try {
     await connectDb();
     await TaskModel.deleteOne({ _id: id });
+    // eslint-disable-next-line @typescript-eslint/no-unused-varss
   } catch (error) {
     state.error = "タスクの削除に失敗しました";
     return state;
