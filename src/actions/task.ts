@@ -56,7 +56,7 @@ export const deleteTask = async (id: string, state: FormState) => {
   try {
     await connectDb();
     await TaskModel.deleteOne({ _id: id });
-    // eslint-disable-next-line @typescript-eslint/no-unused-varss
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     state.error = "タスクの削除に失敗しました";
     return state;
