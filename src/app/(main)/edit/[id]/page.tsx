@@ -13,7 +13,7 @@ const getTask = async (id: string): Promise<TaskDocument> => {
   return data.task as TaskDocument;
 };
 
-const EditTaskPage = async ({ params }: Params) => {
+const EditTaskPage = async (params: Params) => {
   const id = params.id;
   const task = await getTask(id);
   return (
